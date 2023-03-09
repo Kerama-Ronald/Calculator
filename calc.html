@@ -1,249 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Calculator By Kerama
-        <link rel="stylesheet" href="calc.css">
-    </title>
-    <style>
-      *{
-    margin:0px;
-    padding:0px ;
-font-family:sans-serif;
-box-sizing: border-box;
-}
-.container{
-    width: 100%;
-    height: 100vh;
-    background:rgba(0, 128, 0, 0.3) ;
-     display: flex;
-     align-items: center;
-     justify-content: center;}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator By Kerama
+    <link rel="stylesheet" href="calc.css">
+  </title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      font-family: sans-serif;
+      box-sizing: border-box;
+    }
 
-     .Calculator{
-           background: fixed;
-           padding: 20px;
-           border-radius: 10px;
-     }
+    .container {
+      width: 100%;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-     .Calculator  form input{
-            border: 0;
-            outline: 0;
-            width: 60px;
-            border-radius: 10px;
-            box-shadow:rgba(0, 128, 0, 0.3) ;
-            background-color: transparent;
-            font-size: 20px;
-            justify-content: flex-end;
-            margin: 20px;
-     }
-     form .display input{
-         text-align: right;
-box-shadow: none;
-flex: 1;
-font-size: 45px;}
-* {
-    margin: 0;
-    padding: 0;
-    background-color: #2f2f2f;
-  }
-  .main {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-  }
-  .d1 {
-    position: absolute;
-    background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-    background-size: 2700px 1500px;
-  
-    height: 30vh;
-    width: 15vw;
-  
-    background-position: 0 50%;
-  
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    animation: dd1 10s 1, dd12 10s 1;
-    animation-delay: 4s, 14s;
-  }
-  .d2 {
-    position: absolute;
-    background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-    background-size: 2700px 1500px;
-  
-    height: 50vh;
-    width: 25vw;
-  
-    background-position: -10vw 50%;
-    left: 10vw;
-  
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    animation: dd2 10s 2;
-    animation-delay: 4s;
-  }
-  .d3 {
-    position: absolute;
-    background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-    background-size: 2700px 1500px;
-    overflow: hidden;
-  
-    height: 100vh;
-    width: 40vw;
-    left: 25vw;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
-    background-position: -35vw 50%;
-  
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-    animation: dd3 10s 2;
-    animation-delay: 4s;
-  }
-  .d4 {
-    position: absolute;
-    overflow: hidden;
-    background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-    background-size: 2700px 1500px;
-  
-    height: 80vh;
-    width: 25vw;
-    left: 60vw;
-    background-position: -70vw 50%;
-  
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    animation: dd4 10s 2;
-    animation-delay: 4s;
-  }
-  
-  @keyframes dd1 {
-    0% {
+    .Calculator {
+      background: fixed;
+      padding: 20px;
+      border-radius: 10px;
+      width: fit-content;
     }
-    50% {
-      width: 95vw;
-    }
-  }
-  @keyframes dd12 {
-    0% {
-    }
-    50% {
-      background-position: Calc(0vw - 40px) 50%;
-    }
-  }
-  @keyframes dd2 {
-    0% {
-    }
-    50% {
-      background-position: Calc(-10vw - 40px) 50%;
-    }
-  }
-  @keyframes dd3 {
-    0% {
-    }
-    50% {
-      background-position: Calc(-35vw - 40px) 50%;
-    }
-  }
-  @keyframes dd4 {
-    0% {
-    }
-    50% {
-      background-position: Calc(-70vw - 40px) 50%;
-    }
-  }
-  
-     
 
+    .Calculator form input {
+      border: 0;
+      outline: 0;
+      width: 60px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 128, 0, 0.3);
+      background-color: transparent;
+      font-size: 20px;
+      justify-content: flex-end;
+      margin: 20px;
+      color: white;
+    }
 
-        
-      
-    </style>
+    form .display {
+      width: 100%;
+      display: flex;
+    }
+
+    form .display input {
+      text-align: right;
+      box-shadow: none;
+      flex: 1;
+      font-size: 45px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      background-color: #2f2f2f;
+    }
+
+    .main {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    .d1 {
+      position: absolute;
+      background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80); 
+      background-size: 2700px 1500px;
+
+      height: 30vh;
+      width: 15vw;
+
+      background-position: 0 50%;
+
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      animation: dd1 10s 1, dd12 10s 1;
+      animation-delay: 4s, 14s;
+    }
+
+    .d2 {
+      position: absolute;
+      background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80); 
+      background-size: 2700px 1500px;
+
+      height: 50vh;
+      width: 25vw;
+
+      background-position: -10vw 50%;
+      left: 10vw;
+
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      animation: dd2 10s 2;
+      animation-delay: 4s;
+    }
+
+    .d3 {
+      position: absolute;
+      background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80); 
+      background-size: 2700px 1500px;
+      overflow: hidden;
+
+      height: 100vh;
+      width: 40vw;
+      left: 25vw;
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+      background-position: -35vw 50%;
+
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      animation: dd3 10s 2;
+      animation-delay: 4s;
+    }
+
+    .d4 {
+      position: absolute;
+      overflow: hidden;
+      background-image: url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+      background-size: 2700px 1500px;
+
+      height: 80vh;
+      width: 25vw;
+      left: 60vw;
+      background-position: -70vw 50%;
+
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      animation: dd4 10s 2;
+      animation-delay: 4s;
+    }
+
+    @keyframes dd1 {
+      0% {}
+
+      50% {
+        width: 95vw;
+      }
+    }
+
+    @keyframes dd12 {
+      0% {}
+
+      50% {
+        background-position: Calc(0vw - 40px) 50%;
+      }
+    }
+
+    @keyframes dd2 {
+      0% {}
+
+      50% {
+        background-position: Calc(-10vw - 40px) 50%;
+      }
+    }
+
+    @keyframes dd3 {
+      0% {}
+
+      50% {
+        background-position: Calc(-35vw - 40px) 50%;
+      }
+    }
+
+    @keyframes dd4 {
+      0% {}
+
+      50% {
+        background-position: Calc(-70vw - 40px) 50%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  
 
-    <div class="main">
-        <div class="d1"></div>
-        <div class="d2"></div>
-        <div class="d3"></div>
-        <div class="d4"></div>
+  <div class="main">
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <div class="d4"></div>
+  </div>
+  <div class="container">
+    <div class="Calculator">
+      <form>
+        <div class="display">
+          <input type="text" name="display">
+        </div>
+        <div>
+          <input type="button" value="AC" onclick="display.value=''">
+          <input type="button" value="DEL" onclick="display.value=display.value.toString().slice(0,-1)">
+          <input type="button" value="." onclick="display.value+='.'">
+
+        </div>
+        <div>
+          <input type="button" value="1" onclick="display.value+='1'">
+          <input type="button" value="2" onclick="display.value+='2'">
+          <input type="button" value="3" onclick="display.value+='3'">
+          <input type="button" value="*" onclick="display.value+='*'">
+        </div>
+
+        <div>
+          <input type="button" value="4" onclick="display.value+='4'">
+          <input type="button" value="5" onclick="display.value+='5'">
+          <input type="button" value="6" onclick="display.value+='6'">
+          <input type="button" value="-" onclick="display.value+='-'">
+        </div>
+
+        <div>
+          <input type="button" value="7" onclick="display.value+='7'">
+          <input type="button" value="8" onclick="display.value+='8'">
+          <input type="button" value="9" onclick="display.value+='9'">
+          <input type="button" value="+" onclick="display.value+='+'">
+        </div>
+
+        <div>
+          <input type="button" value="0" onclick="display.value+='0'">
+          <input type="button" value="00" onclick="display.value+='00'">
+          <input type="button" value="=" onclick="display.value =eval(display.value)" class="equal">
+          <input type="button" value="/" onclick="display.value+='/'">
+        </div>
+
     </div>
-    <div class="container"> 
-     <div class="Calculator"> 
-           <form>
-            <div>
-                <input type="text" name="display">    
-            </div>
-            <div>
-                <input type="button" value="AC"onclick="display.value=''">
-                <input type="button" value="DEL"onclick="display.value=display.value.toString().slice(0,-1)">
-                <input type="button" value="."onclick="display.value+='.'">
-                
-            </div>
-            <div>
-                <input type="button" value="1"onclick="display.value+='1'">
-                <input type="button" value="2"onclick="display.value+='2'">
-                <input type="button" value="3"onclick="display.value+='3'">
-                <input type="button" value="*"onclick="display.value+='*'">
-            </div>
-
-              <div>
-                <input type="button" value="4"onclick="display.value+='4'">
-                <input type="button" value="5"onclick="display.value+='5'">
-                <input type="button" value="6"onclick="display.value+='6'">
-                <input type="button" value="-"onclick="display.value+='-'">
-              </div>
-
-            <div>
-                <input type="button" value="7" onclick="display.value+='7'">
-                <input type="button" value="8"onclick="display.value+='8'">
-                <input type="button" value="9"onclick="display.value+='9'">
-                <input type="button" value="+"onclick="display.value+='+'">
-              </div>
-
-              <div>
-                <input type="button" value="0"onclick="display.value+='0'">
-                <input type="button" value="00"onclick="display.value+='00'">
-                <input type="button" value="="onclick="display.value =eval(display.value)"class="equal">
-                <input type="button" value="/"onclick="display.value+='/'">
-            </div>
-
-              </div>
 
 
-            </div>
-            <script>
+  </div>
+  <script>
 
-              
-            
 
-            <button onclick="alert('Hello\nHow are you?')">Greetings</button>
 
-          </script>
-           </div>
-            </div>
-        </form>
+
+    <button onclick="alert('Hello\nHow are you?')">Greetings</button>
+
+  </script>
+  </div>
+  </div>
+  </form>
 
 
 
 
 
 
-    
 
 
 
 
 
-    
-    
+
+
+
 </body>
+
 </html>
